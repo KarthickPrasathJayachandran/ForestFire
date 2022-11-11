@@ -308,6 +308,8 @@ public class ForestFire3D : MonoBehaviour
     // this function will be called every frame of the game so the grid is always up to date 
     private void UpdateGridVisuals()
     {
+
+       // forestFireCells[1, 1].SetBurnt();
         // iterate through each cell in the rows and columns
         for (int xCount = 0; xCount < gridSizeX; xCount++)
         {

@@ -48,6 +48,8 @@ GameObject:
   - component: {fileID: 5941394368982769571}
   - component: {fileID: 2395562120029711758}
   - component: {fileID: 5988256229128216027}
+  - component: {fileID: -99402666815019710}
+  - component: {fileID: 9211532693190205716}
   m_Layer: 10
   m_Name: ForestFireCell
   m_TagString: Untagged
@@ -163,6 +165,9 @@ MonoBehaviour:
   currentFire: {fileID: 0}
   playerCamera: {fileID: 0}
   fireVFXDistance: 50
+  _fireVisualEffect: {fileID: 0}
+  avatar: {fileID: 464151296712089587, guid: 9d58a14281241944eb53bc3b611c7093, type: 3}
+  currentavatar: {fileID: 0}
 --- !u!114 &2395562120029711758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +187,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4294967295
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -214,6 +220,8 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -243,7 +251,10 @@ MonoBehaviour:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
   m_MatchOrientation: 0
+  m_MatchDirectionalInput: 0
   m_TeleportTrigger: 0
+  m_FilterSelectionByHitNormal: 0
+  m_UpNormalToleranceDegrees: 30
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
@@ -343,6 +354,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-99402666815019710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517016399536926406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36b150a27d44e641b399e585e3b86a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forestfire: {fileID: 5941394368982769571}
+--- !u!65 &9211532693190205716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517016399536926406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4.43, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1289785187829813023
 PrefabInstance:
   m_ObjectHideFlags: 0
